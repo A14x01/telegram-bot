@@ -18,10 +18,10 @@ def send_welcome(message):
 
     bot.reply_to(message, 'Welcome, {0.first_name}!\n Im <b>{1.first_name}</b> and Im created to be your puppet.'.format(message.from_user, bot.get_me()), parse_mode = 'html', reply_markup = markup)
 
-@bot.message_handler(context_types = ['text'])
-def lalala(message):
+@bot.message_handler()
+def bot_responce(message):
     if message.text == 'Random number':
-        bot.send_message(message.chat.id, str(random.randit(0,100)))
+        bot.send_message(message.chat.id, str(random.randint(0,100)))
     elif message.text == 'How are you?':
         bot.send_message(message.chat.id, 'Im good. What about you?')
     else:
