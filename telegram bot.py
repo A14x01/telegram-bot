@@ -7,7 +7,7 @@ bot = telebot.TeleBot('YOUR_TOKEN')
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    sti = open('/Users/acvet/Downloads/Sticker1.tgs', 'rb')
+    sti = open('/Users/USER_NAME/Downloads/Sticker1.tgs', 'rb')
     bot.send_sticker(message.chat.id, sti)
 
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
